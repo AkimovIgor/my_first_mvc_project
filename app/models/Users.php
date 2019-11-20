@@ -56,6 +56,21 @@ class Users extends Model
         return true;
     }
 
+    public function checkUniqueEmail()
+    {
+        $user = $this->findOneWhere([
+            'email' => $this->attributes['email'],
+        ]);
+        if ($user) {
+            if ($user['email'] == $this->attributes['email']) {
+                $this->errors['email'][] = 'Такой email уже занят';
+                return false;
+            }
+            
+        }
+        return true;
+    }
+
     public function login($data)
     {
         $this->rules = [

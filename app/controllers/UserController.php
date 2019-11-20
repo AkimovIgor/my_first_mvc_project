@@ -13,7 +13,7 @@ class UserController extends BaseController
             $user = new Users();
             $data = $_POST;
             $user->load($data);
-            if (!$user->validate($data) || !$user->checkUnique()) {
+            if (!$user->validate($data) || !$user->checkUniqueEmail()) {
                 $user->getMiniErrors();
                 $user->rememberFieldsData($data);
                 redirect();
