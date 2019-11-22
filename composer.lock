@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "130d86769a1725decf9daf883efaeffb",
+    "content-hash": "5892e70ee498cb6cd425c936eeee7fe4",
     "packages": [
         {
             "name": "vlucas/valitron",

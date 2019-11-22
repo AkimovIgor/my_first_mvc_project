@@ -13,7 +13,7 @@ class MainController extends BaseController
     {
         $comments = new Comments;
         $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
-        $perPage = 5;
+        $perPage = 4;
         $totalCount = $comments->getCount('status = 1');
         $pagination = new Paginator($currentPage, $perPage, $totalCount);
         $offset = $pagination->getOffset();

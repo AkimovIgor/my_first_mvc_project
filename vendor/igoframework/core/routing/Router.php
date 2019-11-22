@@ -69,7 +69,6 @@ class Router
                 self::$currentRoute = $route;
                 return true;
             }
-            // dd($pattern, 0);
         }
         return false;
     }

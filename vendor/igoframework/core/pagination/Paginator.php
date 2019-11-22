@@ -118,6 +118,6 @@ class Paginator
             $pageList .= "'><a class='page-link' href='{$this->uri}page={$i}'>{$i}</a></li>";
         }
 
-        return "<ul class='pagination justify-content-center'>{$startPage}{$prev}{$pageList}{$next}{$endPage}</ul>";
+        return "<ul class='pagination justify-content-center mb-0'>{$startPage}{$prev}{$pageList}{$next}{$endPage}</ul>";
     }
 }

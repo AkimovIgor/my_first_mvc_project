@@ -40,6 +40,7 @@ class View
             extract($vars);
         }
         ob_start();
+        $this->route['prefix'] = str_replace('\\', '/',  $this->route['prefix']);
         $fileView = APP . "/views/{$this->route['prefix']}{$this->route['controller']}/$this->view.php";
         if (file_exists($fileView)) {
             require_once $fileView;

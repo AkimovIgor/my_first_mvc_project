@@ -13,7 +13,7 @@ class CommentController extends BaseController
         $comments = new Comments;
         $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
         $perPage = 4;
-        $totalCount = $comments->getCount('status = 1');
+        $totalCount = $comments->getCount();
         $pagination = new Paginator($currentPage, $perPage, $totalCount);
         $offset = $pagination->getOffset();
         $comments = $comments->getAllForPaginate(null, 'DESC', 'id', $perPage, $offset);
